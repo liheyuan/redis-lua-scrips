@@ -23,3 +23,4 @@ redis-cli --ldb --eval script.lua mykey somekey , arg1 arg2
 * seincr.lua : incr with sentry value check
 * ratelimit.lua : ratelimit
 * dislock.lua / disunlock.lua : lightweight redis lock / unlock (not redlock)
+* bulkdel.lua : del by pattern in batch
