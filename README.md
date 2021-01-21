@@ -26,3 +26,4 @@ redis-cli --ldb --eval script.lua mykey somekey , arg1 arg2
 * bulkdel.lua : del by pattern in batch
 * cas.lua : compare and swap
 * cad.lua : compare and delete 
+* copy.lua : copy a key * value without knowing it's type
