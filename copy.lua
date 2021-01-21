@@ -5,5 +5,5 @@ if redis.call('exists', dstKey) == 1 then
     redis.call('del', dstKey)
 end
 
-redis.call("restore", dstKey, 0, redis.call("dump", srcKey))
+redis.call('restore', dstKey, 0, redis.call('dump', srcKey))
 return 1
