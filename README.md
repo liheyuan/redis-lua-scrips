@@ -4,12 +4,17 @@
 redis-cli --eval script.lua key1 key2 , arg1 arg2
 ```
 
+### benchmark with lua script
+```
+redis-benchmark -n 1000000 EVAL "$(cat ./script.lua | tr -s '\n' '  ')" number_of_key key.. arg..
+```
+
 ### load
 ```
 echo "script load \"$(cat ./script.lua | tr -s '\n' '  ')\"" | redis-cli
 ```
 
-### benchmark
+### benchmark with lua sha
 ```
 redis-benchmark -n 1000000 EVALSHA xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx number_of_key key.. arg..
 ```
